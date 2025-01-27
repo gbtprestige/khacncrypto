@@ -8,8 +8,8 @@
     <style>
         body {
             background-color: #001f4d; /* Bleu foncé */
-            background-image: url('https://github.com/gbtprestige/khacncrypto/raw/main/1233.jpg'); /* Image de fond ajoutée */
-            background-size: cover; /* S'assurer que l'image remplit l'espace */
+            background-image: url('https://github.com/gbtprestige/khacncrypto/raw/main/1233.jpg'); /* Image d'arrière-plan */
+            background-size: cover; /* Couvrir entièrement */
             color: white;
             font-family: Arial, sans-serif;
             position: relative;
@@ -20,13 +20,16 @@
             text-align: center;
         }
         .logo {
-            max-width: 150px;
+            max-width: 150px; /* Largeur du logo */
             margin: 20px 0;
         }
         nav a {
             margin: 0 15px;
             color: white;
             text-decoration: none;
+        }
+        #google-translate-element {
+            margin: 20px 0; /* Espace autour du script */
         }
         .main-content {
             padding: 20px;
@@ -38,18 +41,20 @@
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
+            margin-top: 20px; /* Ajout d'espace */
         }
         .tile {
-            background-color: gold; /* Carrés or */
+            background-color: lightgray; /* Carré gris stylé */
             padding: 20px;
-            margin: 10px;
+            margin: 10px auto; /* Centré */
             border-radius: 10px;
             display: inline-block;
             position: relative;
+            max-width: 300px; /* Largeur maximum */
         }
         .trusted-partners, .audited-by {
             margin: 20px 0;
-            display: flex; /* Pour s'assurer qu'ils sont alignés horizontalement */
+            display: flex; /* Alignement horizontal */
             justify-content: center; /* Centre horizontalement */
         }
         .footer {
@@ -63,10 +68,11 @@
             color: red; /* Texte rouge pour l'avertissement */
             font-weight: bold;
         }
-        /* Ajustement de l'élément Google Translate */
-        #google-translate-element {
-            margin: 10px 0; /* Espace ajouté */
-            font-size: 16px; /* Taille de police ajustée */
+        .background-image {
+            position: absolute;
+            top: 10%; /* Position du logo sur l'image */
+            left: 5%; /* Margin à gauche */
+            opacity: 0.5; /* Opacité du logo */
         }
     </style>
 </head>
@@ -102,13 +108,12 @@
     </p>
     
     <div class="trade-container">
-        <a href="#" class="trade-button">TRADE ON UNISWAP</a>
+        <a href="#" class="trade-button">TRADE ON UNISWAP</a> <!-- Déplacement léger vers le haut -->
     </div>
 
     <div class="call-to-action">
         <div class="tile">
-            <img src="https://github.com/gbtprestige/khacncrypto/raw/main/PNG%20KHAC%20LOGO.png" alt="KharYsma Logo Mini">
-            <p>📈 Click and register to participate in airdrop!</p> <!-- Jaune supprimé -->
+            <p>📈 Click and register to participate in airdrop!</p>
         </div>
     </div>
 
@@ -152,16 +157,4 @@
             const trendsContainer = document.getElementById('trends');
             Object.entries(data).forEach(([country, keywords]) => {
                 const section = document.createElement('section');
-                section.innerHTML = `<h2>Tendances en ${country}</h2><ul>`;
-                keywords.forEach(keyword => {
-                    section.innerHTML += `<li>${keyword}</li>`;
-                });
-                section.innerHTML += '</ul>';
-                trendsContainer.appendChild(section);
-            });
-        })
-        .catch(error => console.error('Error loading JSON:', error));
-</script>
-
-</body>
-</html>
+                section
