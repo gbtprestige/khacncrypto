@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KharYsma Coins</title>
+    <meta name="description" content="Achetez, vendez et échangez KharYsma Coins (KHACN) sur notre plateforme sécurisée. Participez à notre airdrop et suivez les tendances crypto.">
+    <meta name="keywords" content="KharYsma Coins, KHACN, crypto, échange, airdrop, DeFi, Ethereum, Uniswap, Acheter, Vendre">
     <style>
         body {
-            background-color: #1e90ff; /* Couleur de fond bleu */
+            background-color: #001f4d; /* Bleu foncé */
             color: white;
             font-family: Arial, sans-serif;
+            position: relative;
         }
         .header {
-            text-align: center;
+            background-color: black; /* Entête noire */
             padding: 20px;
-            position: relative;
+            text-align: center;
+        }
+        .header .notification {
+            margin: 10px 0;
+            color: white;
         }
         .logo {
             max-width: 200px;
@@ -39,9 +46,11 @@
             margin: 20px 0;
         }
         .footer {
+            background-color: black; /* Footer noir */
             text-align: center;
             padding: 20px;
             position: relative;
+            color: white;
         }
         .background-image {
             background-image: url('https://github.com/gbtprestige/khacncrypto/raw/main/1233.jpg');
@@ -88,7 +97,6 @@
     
     <div class="trade-container">
         <a href="#" class="trade-button">TRADE ON UNISWAP</a>
-        <img src="https://github.com/gbtprestige/khacnwebsite/raw/main/PNG%20KHAC%20LOGO.png" alt="KharYsma Logo" class="large-logo">
     </div>
 
     <div class="call-to-action">
@@ -117,17 +125,20 @@
     <a href="https://t.me/gbtcryptohub" class="partners" style="color: white;">Telegram</a>
     <a href="https://x.com/xforstartarcoin" class="partners" style="color: white;">X</a>
     <a href="https://www.facebook.com/startarcoins/" class="partners" style="color: white;">Meta</a>
+    
     <div>
         <p>Powered by <a href="https://www.groupe-businesstherapie.net" style="color: white;">Groupe Business Thérapie</a></p>
         <p>Visit us at <a href="https://khacn.startarcoins.com" style="color: white;">https://khacn.startarcoins.com</a></p>
         <p>Email: <a href="mailto:contact@startarcoins.com" style="color: white;">contact@startarcoins.com</a></p>
     </div>
+    
     <div style="margin-top: 20px;">
         <p>WEBSITE UNDER DEVELOPMENT, COME BACK IN A FEW WEEKS...</p>
     </div>
 </div>
 
 <script>
+    // Charger les tendances à partir du fichier JSON
     fetch('trending_keywords.json')
         .then(response => response.json())
         .then(data => {
