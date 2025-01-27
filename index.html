@@ -6,6 +6,11 @@
     <title>KharYsma Coins</title>
     <meta name="description" content="Achetez, vendez et échangez KharYsma Coins (KHACN) sur notre plateforme sécurisée. Participez à notre airdrop et suivez les dernières tendances crypto sur Uniswap.">
     <meta name="keywords" content="KharYsma Coins, KHACN, crypto, échange, airdrop, DeFi, Ethereum, Uniswap, Investir, Acheter, Vendre">
+
+    <!-- Manifest pour PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#001f4d">
+    
     <style>
         body {
             background-color: #001f4d; /* Bleu foncé */
@@ -15,6 +20,7 @@
             font-family: Arial, sans-serif;
             position: relative;
             filter: grayscale(0.2); /* Légère teinte de gris */
+            margin: 0; /* Suppression des marges par défaut */
         }
         .header {
             background-color: black; /* Entête noire */
@@ -40,21 +46,22 @@
         .trade-button {
             background-color: yellow; /* Couleur du bouton en jaune */
             color: black; /* Texte en noir */
-            padding: 15px; /* Padding agrandi */
+            padding: 20px; /* Padding agrandi */
             border-radius: 50%; /* Forme en cercle */
             margin-top: 20px; /* Espace ajusté */
             text-decoration: none;
             display: inline-block;
-            width: 100px; /* Largeur du bouton */
-            height: 100px; /* Hauteur pour former un cercle */
-            line-height: 100px; /* Centrer le texte verticalement */
+            width: 120px; /* Largeur du bouton */
+            height: 120px; /* Hauteur pour former un cercle */
+            line-height: 120px; /* Centrer le texte verticalement */
             text-align: center; /* Centrer le texte horizontalement */
             font-weight: bold; /* Texte en gras */
+            font-size: 16px; /* Taille de la police */
         }
         .tile {
             background-color: lightgray; /* Carré gris */
             border: 2px solid black; /* Bord noir */
-            color: black; /* Écriture en noir */
+            color: black; /* Écriture en noir gras */
             padding: 15px; /* Padding pour l'intérieur */
             margin: 5px; /* Espacement réduit */
             border-radius: 10px; /* Coins arrondis */
@@ -66,6 +73,7 @@
             margin: 20px 0; /* Marges en haut et en bas */
             display: flex; /* Alignement horizontal */
             justify-content: flex-start; /* Alignement à gauche */
+            flex-wrap: wrap; /* Permettre aux éléments de se déplacer */
         }
         .footer {
             background-color: black; /* Footer noir */
@@ -82,6 +90,18 @@
         .development-warning {
             color: red; /* Texte rouge pour l'avertissement */
             font-weight: bold; /* Gras pour le texte */
+        }
+
+        /* Styles Responsifs */
+        @media (max-width: 768px) {
+            .trade-button {
+                width: 80px; /* Largeur pour les écrans plus petits */
+                height: 80px;
+                line-height: 80px;
+            }
+            .tile {
+                max-width: 100%; /* Largeur maximale pour les carreaux */
+            }
         }
     </style>
 </head>
@@ -110,11 +130,8 @@
 </div>
 
 <div class="main-content">
-    <h1>YOU ARE IN THE RIGHT PLACE FOR BUY/SELL/SWAP TRADE KHARYSMA COINS (KHACN)</h1>
-    <p>
-        Official link of KHACN in Etherscan, 
-        <a href="#" target="_blank" style="color: white;">see KHACN on Etherscan</a> <!-- Lien cliquable ajouté -->
-    </p>
+    <h1>PWA: POUR QUE LES GENS PUISSENT AJOUTER LE SITE COMME UNE APP</h1>
+    <h2>YOU ARE IN THE RIGHT PLACE FOR BUY/SELL/SWAP TRADE KHARYSMA COINS (KHACN)</h2>
     
     <div class="trade-container">
         <a href="#" class="trade-button">TRADE KHACN</a> <!-- Bouton stylé -->
