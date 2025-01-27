@@ -10,7 +10,7 @@
         body {
             background-color: #001f4d; /* Bleu foncé */
             background-image: url('https://github.com/gbtprestige/khacncrypto/raw/main/1233.jpg'); /* Image d'arrière-plan */
-            background-size: cover; /* Remplir l'espace */
+            background-size: cover;
             color: white;
             font-family: Arial, sans-serif;
             position: relative;
@@ -38,26 +38,30 @@
             text-align: left; /* Aligné à gauche */
         }
         .trade-button {
-            background-color: #ff6347; /* Couleur du bouton */
+            background-color: pink; /* Couleur du bouton en rose */
             color: white;
-            padding: 10px 20px;
+            padding: 10px;
+            border-radius: 50%; /* Arrondi pour faire un cercle */
+            margin-top: 20px; /* Espace ajusté */
             text-decoration: none;
-            border-radius: 5px;
-            margin-top: 30px; /* Espace augmenté */
-            display: block; /* Prend toute la largeur */
+            display: inline-block;
+            width: 60px; /* Largeur du bouton */
+            height: 60px; /* Hauteur pour former un cercle */
+            line-height: 60px; /* Centrer le texte verticalement */
+            text-align: center; /* Centrer le texte horizontalement */
         }
         .tile {
             background-color: lightgray; /* Carré gris */
             padding: 20px;
-            margin: 10px; /* Espacement réduit */
+            margin: 5px 0; /* Espacement réduit avec marge */
             border-radius: 10px;
-            display: inline-block; /* Rester sur la même ligne */
+            display: inline-block;
             max-width: 120px; /* Limitation de largeur */
         }
         .trusted-partners, .audited-by {
             margin: 20px 0;
             display: flex; /* Alignement horizontal */
-            justify-content: space-between; /* Espace entre les éléments */
+            justify-content: flex-start; /* Alignement à gauche */
         }
         .footer {
             background-color: black; /* Footer noir */
@@ -65,6 +69,11 @@
             padding: 20px;
             position: relative;
             color: white;
+        }
+        .footer a {
+            margin: 0 10px; /* Espacement entre les liens */
+            color: white;
+            text-decoration: none;
         }
         .development-warning {
             color: red; /* Texte rouge pour l'avertissement */
@@ -104,12 +113,12 @@
     </p>
     
     <div class="trade-container">
-        <a href="#" class="trade-button">TRADE ON UNISWAP</a>
+        <a href="#" class="trade-button">TRADE</a> <!-- Bouton stylé -->
     </div>
 
-    <div class="call-to-action">
-        <div class="tile">
-            <p>📈 Click and register to participate in airdrop!</p> <!-- Carré gris -->
+    <div class="call-to-action" style="margin-top: 20px;">
+        <div class="tile" style="background-color: yellow; color: black;"> <!-- Cliquer entouré de jaune -->
+            <p>📈 Click and register to participate in airdrop!</p>
         </div>
     </div>
 
@@ -129,10 +138,10 @@
 
 <div class="footer">
     <p>Follow us on:</p>
-    <a href="#" class="partners" style="color: white;">GitHub</a>
-    <a href="#" class="partners" style="color: white;">Telegram</a>
-    <a href="#" class="partners" style="color: white;">X</a>
-    <a href="#" class="partners" style="color: white;">Meta</a>
+    <a href="#">GitHub</a>
+    <a href="#">Telegram</a>
+    <a href="#">X</a>
+    <a href="#">Meta</a>
     
     <div>
         <p>Powered by <a href="#" style="color: white;">Groupe Business Thérapie</a></p>
