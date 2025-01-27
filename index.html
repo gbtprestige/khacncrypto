@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KharYsma Coins</title>
-    <meta name="description" content="Achetez, vendez et échangez KharYsma Coins (KHACN) sur notre plateforme sécurisée. Participez à notre airdrop et suivez les tendances crypto.">
+    <meta name="description" content="Achetez, vendez et échangez KharYsma Coins (KHACN) sur notre plateforme sécurisée. Participez à notre airdrop et suivez les dernières tendances crypto sur Uniswap.">
+    <meta name="keywords" content="KharYsma Coins, KHACN, crypto, échange, airdrop, DeFi, Ethereum, Uniswap, Investir, Acheter, Vendre">
     <style>
         body {
             background-color: #001f4d; /* Bleu foncé */
             background-image: url('https://github.com/gbtprestige/khacncrypto/raw/main/1233.jpg'); /* Image d'arrière-plan */
-            background-size: cover; /* Couvrir entièrement */
+            background-size: cover; /* Remplir l'espace */
             color: white;
             font-family: Arial, sans-serif;
             position: relative;
+            filter: grayscale(0.2); /* Légère teinte de gris */
         }
         .header {
             background-color: black; /* Entête noire */
@@ -20,7 +22,7 @@
             text-align: center;
         }
         .logo {
-            max-width: 150px; /* Largeur du logo */
+            max-width: 150px;
             margin: 20px 0;
         }
         nav a {
@@ -33,7 +35,7 @@
         }
         .main-content {
             padding: 20px;
-            text-align: center;
+            text-align: left; /* Aligné à gauche */
         }
         .trade-button {
             background-color: #ff6347; /* Couleur du bouton */
@@ -41,21 +43,21 @@
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
-            margin-top: 20px; /* Ajout d'espace */
+            margin-top: 30px; /* Espace augmenté */
+            display: block; /* Prend toute la largeur */
         }
         .tile {
-            background-color: lightgray; /* Carré gris stylé */
+            background-color: lightgray; /* Carré gris */
             padding: 20px;
-            margin: 10px auto; /* Centré */
+            margin: 10px; /* Espacement réduit */
             border-radius: 10px;
-            display: inline-block;
-            position: relative;
-            max-width: 300px; /* Largeur maximum */
+            display: inline-block; /* Rester sur la même ligne */
+            max-width: 120px; /* Limitation de largeur */
         }
         .trusted-partners, .audited-by {
             margin: 20px 0;
             display: flex; /* Alignement horizontal */
-            justify-content: center; /* Centre horizontalement */
+            justify-content: space-between; /* Espace entre les éléments */
         }
         .footer {
             background-color: black; /* Footer noir */
@@ -67,12 +69,6 @@
         .development-warning {
             color: red; /* Texte rouge pour l'avertissement */
             font-weight: bold;
-        }
-        .background-image {
-            position: absolute;
-            top: 10%; /* Position du logo sur l'image */
-            left: 5%; /* Margin à gauche */
-            opacity: 0.5; /* Opacité du logo */
         }
     </style>
 </head>
@@ -108,12 +104,12 @@
     </p>
     
     <div class="trade-container">
-        <a href="#" class="trade-button">TRADE ON UNISWAP</a> <!-- Déplacement léger vers le haut -->
+        <a href="#" class="trade-button">TRADE ON UNISWAP</a>
     </div>
 
     <div class="call-to-action">
         <div class="tile">
-            <p>📈 Click and register to participate in airdrop!</p>
+            <p>📈 Click and register to participate in airdrop!</p> <!-- Carré gris -->
         </div>
     </div>
 
@@ -157,4 +153,16 @@
             const trendsContainer = document.getElementById('trends');
             Object.entries(data).forEach(([country, keywords]) => {
                 const section = document.createElement('section');
-                section
+                section.innerHTML = `<h2>Tendances en ${country}</h2><ul>`;
+                keywords.forEach(keyword => {
+                    section.innerHTML += `<li>${keyword}</li>`;
+                });
+                section.innerHTML += '</ul>';
+                trendsContainer.appendChild(section);
+            });
+        })
+        .catch(error => console.error('Error loading JSON:', error));
+</script>
+
+</body>
+</html>
