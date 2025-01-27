@@ -18,12 +18,8 @@
             padding: 20px;
             text-align: center;
         }
-        .header .notification {
-            margin: 10px 0;
-            color: white;
-        }
         .logo {
-            max-width: 200px;
+            max-width: 150px; /* Redimensionnement du logo */
             margin: 20px 0;
         }
         nav a {
@@ -42,6 +38,20 @@
             text-decoration: none;
             border-radius: 5px;
         }
+        .tile {
+            background-color: gold; /* Carrés or */
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            display: inline-block;
+            position: relative;
+        }
+        .tile img {
+            width: 30px; /* Mini logo */
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
         .trusted-partners, .audited-by {
             margin: 20px 0;
         }
@@ -51,6 +61,10 @@
             padding: 20px;
             position: relative;
             color: white;
+        }
+        .development-warning {
+            color: red; /* Texte rouge pour l'avertissement */
+            font-weight: bold;
         }
         .background-image {
             background-image: url('https://github.com/gbtprestige/khacncrypto/raw/main/1233.jpg');
@@ -67,8 +81,7 @@
 <body>
 
 <div class="header">
-    <div class="notification">WEBSITE UNDER DEVELOPMENT, COME BACK IN A FEW WEEKS</div>
-    <img src="https://github.com/gbtprestige/khacnwebsite/raw/main/PNG%20KHAC%20LOGO.png" alt="KharYsma Logo" class="logo">
+    <img src="https://github.com/gbtprestige/khacncrypto/raw/main/PNG%20KHAC%20LOGO.png" alt="KharYsma Logo" class="logo">
     
     <nav>
         <a href="#">HOME</a>
@@ -100,20 +113,23 @@
     </div>
 
     <div class="call-to-action">
-        <p>📈 Register to participate in airdrop!</p>
+        <div class="tile">
+            <img src="https://github.com/gbtprestige/khacncrypto/raw/main/PNG%20KHAC%20LOGO.png" alt="KharYsma Logo Mini">
+            <p>📈 Click and register to participate in airdrop!</p>
+        </div>
     </div>
 
     <div class="trusted-partners">
-        <p>Trusted by:</p>
-        <span class="partners"><a href="https://groupe-businesstherapie.net" style="color: white; text-decoration: none;">GBT</a></span>
-        <span class="partners"><a href="https://www.r-b-a.fr" style="color: white; text-decoration: none;">RBA Ltd</a></span>
-        <span class="partners">Audit website (lien à ajouter)</span>
+        <h2>Trusted by:</h2>
+        <div class="tile">GBT</div>
+        <div class="tile">RBA Ltd</div>
+        <div class="tile">More</div>
     </div>
 
     <div class="audited-by">
-        <p>Audited by:</p>
-        <span class="audits">DE.FI</span>
-        <span class="audits">Certik Quick Scan</span>
+        <h2>Audited by:</h2>
+        <div class="tile">DE.FI</div>
+        <div class="tile">Certik Quick Scan</div>
     </div>
 </div>
 
@@ -133,7 +149,7 @@
     </div>
     
     <div style="margin-top: 20px;">
-        <p>WEBSITE UNDER DEVELOPMENT, COME BACK IN A FEW WEEKS...</p>
+        <p class="development-warning">WEBSITE UNDER DEVELOPMENT</p>
     </div>
 </div>
 
