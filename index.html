@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KharYsma Coins</title>
     <meta name="description" content="Achetez, vendez et échangez KharYsma Coins (KHACN) sur notre plateforme sécurisée. Participez à notre airdrop et suivez les tendances crypto.">
-    <meta name="keywords" content="KharYsma Coins, KHACN, crypto, échange, airdrop, DeFi, Ethereum, Uniswap, Acheter, Vendre">
     <style>
         body {
             background-color: #001f4d; /* Bleu foncé */
+            background-image: url('https://github.com/gbtprestige/khacncrypto/raw/main/1233.jpg'); /* Image de fond ajoutée */
+            background-size: cover; /* S'assurer que l'image remplit l'espace */
             color: white;
             font-family: Arial, sans-serif;
             position: relative;
@@ -46,14 +47,10 @@
             display: inline-block;
             position: relative;
         }
-        .tile img {
-            width: 30px; /* Mini logo */
-            position: absolute;
-            top: 10px;
-            left: 10px;
-        }
         .trusted-partners, .audited-by {
             margin: 20px 0;
+            display: flex; /* Pour s'assurer qu'ils sont alignés horizontalement */
+            justify-content: center; /* Centre horizontalement */
         }
         .footer {
             background-color: black; /* Footer noir */
@@ -66,15 +63,10 @@
             color: red; /* Texte rouge pour l'avertissement */
             font-weight: bold;
         }
-        .background-image {
-            background-image: url('https://github.com/gbtprestige/khacncrypto/raw/main/1233.jpg');
-            background-size: cover;
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            height: 100%;
-            width: 50%;
-            opacity: 0.2; /* Opacité de l'image de fond */
+        /* Ajustement de l'élément Google Translate */
+        #google-translate-element {
+            margin: 10px 0; /* Espace ajouté */
+            font-size: 16px; /* Taille de police ajustée */
         }
     </style>
 </head>
@@ -93,8 +85,7 @@
         <a href="#">NEWS / LISTING</a>
     </nav>
     
-    <!-- Google Translate Script Adjusted for Size -->
-    <div id="google-translate-element" class="translate" style="font-size: 14px;"></div>
+    <div id="google-translate-element" class="translate"></div>
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({pageLanguage: 'fr', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google-translate-element');
@@ -117,7 +108,7 @@
     <div class="call-to-action">
         <div class="tile">
             <img src="https://github.com/gbtprestige/khacncrypto/raw/main/PNG%20KHAC%20LOGO.png" alt="KharYsma Logo Mini">
-            <p>📈 Click and register to participate in airdrop!</p>
+            <p>📈 Click and register to participate in airdrop!</p> <!-- Jaune supprimé -->
         </div>
     </div>
 
@@ -137,14 +128,14 @@
 
 <div class="footer">
     <p>Follow us on:</p>
-    <a href="https://github.com/startar-bronze/khacngit/tree/main" class="partners" style="color: white;">GitHub</a>
-    <a href="https://t.me/gbtcryptohub" class="partners" style="color: white;">Telegram</a>
-    <a href="https://x.com/xforstartarcoin" class="partners" style="color: white;">X</a>
-    <a href="https://www.facebook.com/startarcoins/" class="partners" style="color: white;">Meta</a>
+    <a href="#" class="partners" style="color: white;">GitHub</a>
+    <a href="#" class="partners" style="color: white;">Telegram</a>
+    <a href="#" class="partners" style="color: white;">X</a>
+    <a href="#" class="partners" style="color: white;">Meta</a>
     
     <div>
-        <p>Powered by <a href="https://www.groupe-businesstherapie.net" style="color: white;">Groupe Business Thérapie</a></p>
-        <p>Visit us at <a href="https://khacn.startarcoins.com" style="color: white;">https://khacn.startarcoins.com</a></p>
+        <p>Powered by <a href="#" style="color: white;">Groupe Business Thérapie</a></p>
+        <p>Visit us at <a href="#" style="color: white;">https://khacn.startarcoins.com</a></p>
         <p>Email: <a href="mailto:contact@startarcoins.com" style="color: white;">contact@startarcoins.com</a></p>
     </div>
     
@@ -172,6 +163,5 @@
         .catch(error => console.error('Error loading JSON:', error));
 </script>
 
-<div class="background-image"></div>
 </body>
 </html>
