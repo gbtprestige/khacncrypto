@@ -11,103 +11,111 @@
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#001f4d">
     
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
         body {
-            background-color: #001f4d; /* Bleu foncé */
-            background-image: url('https://github.com/gbtprestige/khacncrypto/raw/main/1233.jpg'); /* Image d'arrière-plan */
+            background-color: #001f4d;
+            background-image: url('https://github.com/gbtprestige/khacncrypto/raw/main/1233.jpg');
             background-size: cover;
             color: white;
-            font-family: Arial, sans-serif;
-            position: relative;
-            filter: grayscale(0.2); /* Légère teinte de gris */
-            margin: 0; /* Suppression des marges par défaut */
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
         }
-        .header {
-            background-color: black; /* Entête noire */
+        header {
+            background-color: black;
             padding: 20px;
             text-align: center;
         }
         .logo {
-            max-width: 150px; /* Largeur du logo */
+            max-width: 150px;
             margin: 20px 0;
         }
         nav a {
-            margin: 0 15px; /* Espacement */
+            margin: 0 15px;
             color: white;
             text-decoration: none;
+            transition: color 0.3s;
         }
-        #google-translate-element {
-            margin: 20px 0; /* Espace autour du script */
+        nav a:hover {
+            color: yellow;
         }
         .main-content {
             padding: 20px;
-            text-align: left; /* Aligné à gauche */
+            text-align: left;
         }
         .trade-button {
-            background-color: yellow; /* Couleur du bouton en jaune */
-            color: black; /* Texte en noir */
-            padding: 20px; /* Padding agrandi */
-            border-radius: 50%; /* Forme en cercle */
-            margin-top: 20px; /* Espace ajusté */
+            background-color: yellow;
+            color: black;
+            padding: 20px;
+            border-radius: 50%;
+            margin-top: 20px;
             text-decoration: none;
             display: inline-block;
-            width: 120px; /* Largeur du bouton */
-            height: 120px; /* Hauteur pour former un cercle */
-            line-height: 120px; /* Centrer le texte verticalement */
-            text-align: center; /* Centrer le texte horizontalement */
-            font-weight: bold; /* Texte en gras */
-            font-size: 16px; /* Taille de la police */
+            width: 120px;
+            height: 120px;
+            line-height: 120px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+            transition: transform 0.3s;
+        }
+        .trade-button:hover {
+            transform: scale(1.1);
         }
         .tile {
-            background-color: lightgray; /* Carré gris */
-            border: 2px solid black; /* Bord noir */
-            color: black; /* Écriture en noir gras */
-            padding: 15px; /* Padding pour l'intérieur */
-            margin: 5px; /* Espacement réduit */
-            border-radius: 10px; /* Coins arrondis */
-            display: inline-block; /* Rester sur la même ligne */
-            max-width: 120px; /* Largeur max */
-            font-weight: bold; /* Gras pour le texte */
+            background-color: lightgray;
+            border: 2px solid black;
+            color: black;
+            padding: 15px;
+            margin: 5px;
+            border-radius: 10px;
+            display: inline-block;
+            max-width: 120px;
+            font-weight: bold;
         }
         .trusted-partners, .audited-by {
-            margin: 20px 0; /* Marges en haut et en bas */
-            display: flex; /* Alignement horizontal */
-            justify-content: flex-start; /* Alignement à gauche */
-            flex-wrap: wrap; /* Permettre aux éléments de se déplacer */
+            margin: 20px 0;
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
         }
-        .footer {
-            background-color: black; /* Footer noir */
+        footer {
+            background-color: black;
             text-align: center;
             padding: 20px;
             position: relative;
             color: white;
         }
-        .footer a {
-            margin: 0 10px; /* Espacement pour les liens */
+        footer a {
+            margin: 0 10px;
             color: white;
-            text-decoration: none; /* Pas de soulignement */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: yellow;
         }
         .development-warning {
-            color: red; /* Texte rouge pour l'avertissement */
-            font-weight: bold; /* Gras pour le texte */
+            color: red;
+            font-weight: bold;
         }
 
-        /* Styles Responsifs */
         @media (max-width: 768px) {
             .trade-button {
-                width: 80px; /* Largeur pour les écrans plus petits */
+                width: 80px;
                 height: 80px;
                 line-height: 80px;
             }
             .tile {
-                max-width: 100%; /* Largeur maximale pour les carreaux */
+                max-width: 100%;
             }
         }
     </style>
 </head>
 <body>
 
-<div class="header">
+<header>
     <img src="https://github.com/gbtprestige/khacncrypto/raw/main/PNG%20KHAC%20LOGO.png" alt="KharYsma Logo" class="logo">
     
     <nav>
@@ -127,17 +135,17 @@
         }
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-</div>
+</header>
 
-<div class="main-content">
+<main class="main-content">
     <h1>YOU ARE IN THE RIGHT PLACE FOR BUY/SELL/SWAP TRADE KHARYSMA COINS (KHACN)</h1>
     
     <div class="trade-container">
-        <a href="#" class="trade-button">TRADE KHACN</a> <!-- Bouton stylé -->
+        <a href="#" class="trade-button">TRADE KHACN</a>
     </div>
 
     <div class="call-to-action" style="margin-top: 20px;">
-        <div class="tile" style="background-color: yellow; color: black;"> <!-- Carré entouré de jaune -->
+        <div class="tile" style="background-color: yellow; color: black;">
             <p>📈 Click and register to participate in airdrop!</p>
         </div>
     </div>
@@ -154,9 +162,9 @@
         <div class="tile">DE.FI</div>
         <div class="tile">Certik Quick Scan</div>
     </div>
-</div>
+</main>
 
-<div class="footer">
+<footer>
     <p>Follow us on:</p>
     <a href="https://x.com/xforstartarcoin">X</a>
     <a href="https://www.facebook.com/startarcoins/">Meta</a>
@@ -172,10 +180,9 @@
     <div style="margin-top: 20px;">
         <p class="development-warning">WEBSITE UNDER DEVELOPMENT</p>
     </div>
-</div>
+</footer>
 
 <script>
-    // Charger les tendances à partir du fichier JSON
     fetch('trending_keywords.json')
         .then(response => response.json())
         .then(data => {
