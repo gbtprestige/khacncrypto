@@ -313,6 +313,15 @@
     const chatbotMessages = document.getElementById('chatbot-messages');
     const chatbotInput = document.getElementById('chatbot-input');
     const chatbotSend = document.getElementById('chatbot-send');
+    const googleTranslateElement = document.getElementById('google-translate-element');
+    let currentLanguage = 'en'; // Langue de base en anglais
+
+    googleTranslateElement.addEventListener('click', () => {
+        currentLanguage = currentLanguage === 'en' ? 'fr' : 'en';
+        document.getElementById('chatbot-title').innerText = currentLanguage === 'en' ? 'Chatbot AI' : 'Assistant IA';
+        document.getElementById('chatbot-input').placeholder = currentLanguage === 'en' ? 'Ask your question...' : 'Posez votre question...';
+        document.getElementById('chatbot-send').innerText = currentLanguage === 'en' ? 'Send' : 'Envoyer';
+    });
 
     chatbotSend.addEventListener('click', sendMessage);
     chatbotInput.addEventListener('keypress', function(e) {
@@ -324,7 +333,7 @@
     async function sendMessage() {
         const message = chatbotInput.value.trim();
         if (message) {
-            chatbotMessages.innerHTML += `<div style="text-align: right; margin-bottom: 10px;"><strong>You:</strong> ${message}</div>`;
+            chatbotMessages.innerHTML += `<div style="text-align: right; margin-bottom: 10px;"><strong>${currentLanguage === 'en' ? 'You:' : 'Vous:'}</strong> ${message}</div>`;
             chatbotInput.value = '';
             chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
 
@@ -334,29 +343,18 @@
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ message })
+                    body: JSON.stringify({ message, language: currentLanguage })
                 });
                 const data = await response.json();
-                chatbotMessages.innerHTML += `<div style="text-align: left; margin-bottom: 10px;"><strong>Chatbot:</strong> ${data.result}</div>`;
+                chatbotMessages.innerHTML += `<div style="text-align: left; margin-bottom: 10px;"><strong>${currentLanguage === 'en' ? 'Chatbot:' : 'Assistant:'}</strong> ${data.result}</div>`;
                 chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
             } catch (error) {
                 console.error('Error sending message:', error);
-                chatbotMessages.innerHTML += `<div style="text-align: left; margin-bottom: 10px;"><strong>Chatbot:</strong> An error occurred. Please try again.</div>`;
+                chatbotMessages.innerHTML += `<div style="text-align: left; margin-bottom: 10px;"><strong>${currentLanguage === 'en' ? 'Chatbot:' : 'Assistant:'}</strong> An error occurred. Please try again.</div>`;
                 chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
             }
         }
     }
-
-    // Traduction automatique du chatbot
-    const translateButton = document.getElementById('google-translate-element');
-    let currentLanguage = 'en';
-
-    translateButton.addEventListener('click', () => {
-        currentLanguage = currentLanguage === 'en' ? 'fr' : 'en';
-        document.getElementById('chatbot-title').innerText = currentLanguage === 'en' ? 'Chatbot AI' : 'Assistant IA';
-        document.getElementById('chatbot-input').placeholder = currentLanguage === 'en' ? 'Ask your question...' : 'Posez votre question...';
-        document.getElementById('chatbot-send').innerText = currentLanguage === 'en' ? 'Send' : 'Envoyer';
-    });
 
     // Fetch des tendances
     fetch('trending_keywords.json')
@@ -365,7 +363,7 @@
             const trendsContainer = document.getElementById('trends');
             Object.entries(data).forEach(([country, keywords]) => {
                 const section = document.createElement('section');
-                section.innerHTML = `<h2>Trends in ${country}</h2><ul>`;
+                section.innerHTML = `<h2>${currentLanguage === 'en' ? 'Trends in' : 'Tendances en'} ${country}</h2><ul>`;
                 keywords.forEach(keyword => {
                     section.innerHTML += `<li>${keyword}</li>`;
                 });
