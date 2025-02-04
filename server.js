@@ -5,8 +5,6 @@ const bodyParser = require('body-parser');
 const { Configuration, OpenAIApi } = require('openai');
 
 const app = express();
-const port = process.env.PORT || 3000;
-
 app.use(bodyParser.json());
 
 const configuration = new Configuration({
@@ -105,6 +103,5 @@ Vous êtes un assistant utile. Répondez en vous basant sur le contenu suivant :
   return language === 'fr' ? `Traduit en français : ${prompt}` : prompt;
 }
 
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+// Export the Express app for Vercel
+module.exports = app;
